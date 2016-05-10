@@ -9,6 +9,15 @@ public class Database {
 	protected static Item[] items;
 	protected static Location[] locations;
 	
+	public Item getItemById(int id){
+		return items[id];
+	}
+	
+	public void setItem(Item item){
+		items[item.getId()] = item;
+		//TODO save item
+	}
+	
 	static {init();} private static void init(){
 		
 	}
