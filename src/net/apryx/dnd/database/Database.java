@@ -6,6 +6,7 @@ import net.apryx.dnd.world.Location;
 //TODO refactor
 public class Database {
 	
+	protected static DatabaseHelper helper;
 	protected static Item[] items;
 	protected static Location[] locations;
 	
@@ -27,7 +28,7 @@ public class Database {
 		//TODO save location
 	}
 	
-	static {init();} private static void init() {
-		
+	static {init();} private static void init(){
+		helper = new DatabaseHelper("dnd.db");
 	}
 }
