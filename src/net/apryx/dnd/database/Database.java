@@ -19,6 +19,15 @@ public class Database {
 		//TODO save item
 	}
 	
+	public Location getLocationById(int id){
+		return locations[id];
+	}
+	
+	public void setLocation(Location location){
+		locations[location.getId()] = location;
+		//TODO save location
+	}
+	
 	static {init();} private static void init(){
 		helper = new DatabaseHelper("dnd.db");
 	}
