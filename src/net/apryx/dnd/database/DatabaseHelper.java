@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
+
+import net.apryx.dnd.items.Item;
+import net.apryx.dnd.world.Location;
 
 public class DatabaseHelper {
 	
@@ -36,6 +40,14 @@ public class DatabaseHelper {
 				try{statement.close();}catch(Exception e){e.printStackTrace();}
 		}
 		
+	}
+	
+	public List<Item> getItems(){
+		return null;
+	}
+	
+	public List<Location> getLocations(){
+		return null;
 	}
 	
 	public String getDatabase() {

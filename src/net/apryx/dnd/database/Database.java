@@ -1,5 +1,7 @@
 package net.apryx.dnd.database;
 
+import java.util.List;
+
 import net.apryx.dnd.items.Item;
 import net.apryx.dnd.world.Location;
 
@@ -30,5 +32,8 @@ public class Database {
 	
 	static {init();} private static void init(){
 		helper = new DatabaseHelper("dnd.db");
+		
+		List<Item> items = helper.getItems();
+		List<Location> locations = helper.getLocations();
 	}
 }
